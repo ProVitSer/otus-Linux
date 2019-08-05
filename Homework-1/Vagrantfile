@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+    config.vm.box = "centos/7"
+  
+    config.vm.box_check_update = false
+  
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = 4096
+      vb.cpus = 2
+    end
+    box.vm.provision "shell", type: "shell", inline: <<-SHELL
+        mkdir -p ~root/.ssh
+        cp ~vagrant/.ssh/auth* ~root/.ssh
+        yum install -y wget ncurses-devel make gcc bc bison flex perl elfutils-libelf-devel openssl-devel grub2 git
+    SHELL
+    config.vm.provision "shell", path: "kernel.sh"
+  end
