@@ -38,9 +38,9 @@ Vagrant.configure("2") do |config|
         box.vm.provision "shell", inline: <<-SHELL
             mkdir -p ~root/.ssh
             cp ~vagrant/.ssh/auth* ~root/.ssh
-            yum -y install epel-release
+            #yum -y install epel-release
             rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-            yum -y install createrepo httpd rpm-build rpmdevtools yum-utils autoconf automake gcc gcc-c++ less libpcap libpcap-devel libtool lksctp-tools lksctp-tools-devel ncurses ncurses-devel openssl openssl-devel gsl gsl-devel autoconf-archive gmock-devel gtest-devel gmock gtest nginx
+            yum -y install createrepo rpm-build rpmdevtools yum-utils autoconf automake gcc gcc-c++ less libpcap libpcap-devel libtool lksctp-tools lksctp-tools-devel ncurses ncurses-devel openssl openssl-devel gsl gsl-devel autoconf-archive gmock-devel gtest-devel gtest nginx
             cd /root/
             yumdownloader --enablerepo=epel --source sipp 
             useradd mockbuild
