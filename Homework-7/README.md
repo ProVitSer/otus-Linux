@@ -13,6 +13,7 @@
 
 Из параметров grub найти строку , которая начинается с linux16, находим ro, и заменяем его на rw init=/sysroot/bin/sh
 
+
 ![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/2.png)
 
 Далее выходим нажав комбинацию Ctrl+X и входим в emergency режим, и вводим следующую команду
