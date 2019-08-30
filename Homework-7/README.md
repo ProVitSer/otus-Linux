@@ -12,20 +12,31 @@
 ![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/1.png)
 
 Из параметров grub найти строку , которая начинается с linux16, находим ro, и заменяем его на rw init=/sysroot/bin/sh
+![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/2.png)
 
 Далее выходим нажав комбинацию Ctrl+X и входим в emergency режим, и вводим следующую команду
 
-chroot /sysroot/
+![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/3.png)
 
+```bash
+chroot /sysroot/
+```
 И меняем пароль от root с помощью команды 
 
+```bash
 passwd root
+```
 
 После этого, обновляем параметры SELinux  с помощью команды 
-
+```bash
 touch /.autorelable
+```
+
+![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/4.png)
 
 После этого нужно перезапустить сервер с помощью команды reboot -f и зайти в систему под новым паролем
+
+![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/5.png)
 
 
 
@@ -33,26 +44,45 @@ touch /.autorelable
 
 При запуске системы нажимаем e, и переходим в режим редавтирования
 
-Из параметров grub найти строку, которая начинается с linux16, перейти в самый конец и добавить rd.break
+![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/1-1.png)
 
+Из параметров grub найти строку, которая начинается с linux16, перейти в самый конец и добавить rd.break
 Далее выходим нажав комбинацию Ctrl+X и входим в emergency режим. На данном этапе корневая фаловая система монтируется в режиме только на чтение в /sysroot и должна быть перемонтирована с разрешением на чтение/хапись, чтобы мы могли вносить изменения. Для этого выполняем следующу команду
 
+```bash
 mount -o remount,rw /sysroot
+```
+
+![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/1-3.png)
 
 
 После того как файловая система была пермонтирована выполняем комнаду 
 
+```bash
 chroot /sysroot
+```
+![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/1-4.png)
 
 И меняем пароль от root с помощью команды 
 
+```bash
 passwd root
-
+```
 После этого, обновляем параметры SELinux  с помощью команды 
 
+```bash
 touch /.autorelable
+```
+![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/1-5.png)
 
 После этого нужно перезапустить сервер с помощью команды reboot -f и зайти в систему под новым паролем
+
+![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/1-6.png)
+
+
+# **Итог 1 задания**
+
+Отличе первого способо от второго в том, что первый изменяет процесс с которого стартует ядро, а второй использует прерывания процесса до загрузки
 
 
 # **Задание 2**
@@ -203,3 +233,4 @@ shutdown
 
 Перезагружаемся
 
+![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/3-1.png)
