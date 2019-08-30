@@ -7,7 +7,7 @@
 
 # **Задание 1 Способо 1**
 
-При запуске системы нажимаем e, и переходим в режим редавтирования
+При запуске системы нажимаем e, и переходим в режим редактирования
 
 ![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/1.png)
 
@@ -44,7 +44,7 @@ touch /.autorelable
 
 # **Задание 1 Способо 2**
 
-При запуске системы нажимаем e, и переходим в режим редавтирования
+При запуске системы нажимаем e, и переходим в режим редактирования
 
 ![alt text](https://github.com/ProVitSer/otus-Linux/blob/master/Homework-7/images/1-1.png)
 
