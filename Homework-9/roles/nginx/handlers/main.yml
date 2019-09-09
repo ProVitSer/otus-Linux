@@ -1,0 +1,11 @@
+---
+# handlers file for roles/nginx
+- name: Nginx start
+  systemd:
+    name: nginx
+    state: started
+
+- name: Nginx restart
+  systemd:
+    name: nginx
+    state: restarted

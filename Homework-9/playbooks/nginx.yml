@@ -1,0 +1,7 @@
+---
+- name: Install Nginx Otus
+  hosts: redhat-server
+  become: yes
+  gather_facts: true
+  roles:
+    - nginx

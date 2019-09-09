@@ -1,0 +1,2 @@
+[redhat-server]
+nginx ansible_host=192.168.15.137

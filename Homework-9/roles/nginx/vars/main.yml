@@ -1,0 +1,6 @@
+---
+# vars file for roles/nginx
+worker_processes: auto
+worker_connections: 2048
+nginx_user: nginx
+nginx_listening_port: 8080

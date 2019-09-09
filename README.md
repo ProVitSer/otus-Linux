@@ -8,3 +8,5 @@
 - [Homework-4:Bash, awk, sed, grep и другие](https://github.com/ProVitSer/otus-Linux/tree/master/Homework-4 "Homework-4:Bash, awk, sed, grep и другие")
 - [Homework-5:Управление процессами](https://github.com/ProVitSer/otus-Linux/tree/master/Homework-5 "Homework-5:Управление процессами")
 - [Homework-6:Управление пакетами. Дистрибьюция софта](https://github.com/ProVitSer/otus-Linux/tree/master/Homework-6 "Homework-6:Управление пакетами. Дистрибьюция софта")
+- [Homework-7:Загрузка системы](https://github.com/ProVitSer/otus-Linux/tree/master/Homework-7 "Homework-7:Загрузка системы")
+- [Homework-9:Автоматизация администрирования. Ansible](https://github.com/ProVitSer/otus-Linux/tree/master/Homework-9 "Homework-9:Автоматизация администрирования. Ansible")

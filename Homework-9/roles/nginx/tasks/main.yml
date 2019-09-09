@@ -1,0 +1,37 @@
+---
+# tasks file for roles/nginx
+#
+- name: Install EPEL Repo
+  yum:
+    name: epel-release
+    state: present
+  tags:
+    - epel-package
+
+- name: Install Nginx Web Server on RedHat
+  yum:
+    name: nginx
+    state: present
+  when:
+    ansible_os_family == "RedHat"
+  tags:
+    - install-nginx
+  notify:
+    - Nginx start
+
+- name: Enabled nginx
+  systemd:
+     name: nginx
+     enabled: yes
+     state: restarted
+  tags:
+    - enable-nginx
+
+- name: Change Nginx config from template
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+  tags:
+    - nginx-conf-template
+  notify:
+    - Nginx restart
